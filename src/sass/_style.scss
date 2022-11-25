@@ -150,7 +150,7 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
 }
 
 .font-container {
-  background-color: $font-blue;
+  // background-color: $font-blue;
   color: $white;
   font-size: 11px;
 
@@ -158,6 +158,7 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
   padding-top: 10px;
   min-width: 30px;
   height: 35px;
+  border-right: 1px solid white;
 }
 
 .btn-oa2-facebook {
@@ -165,11 +166,19 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
   border-color: $facebook-blue;
   background-color: $facebook-blue;
 
+  .font-container {
+    background-color: $facebook-blue;
+  }
+
   &:hover,
   &:focus {
     background-color: $facebook-focus-blue;
     border: 1px solid $facebook-focus-blue;
     color: $white;
+
+    .font-container {
+      background-color: $facebook-focus-blue;
+    }
   }
 }
 
@@ -177,6 +186,10 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
   color: $white;
   border-color: $google-blue;
   background-color: $google-blue;
+
+  .font-container {
+    background-color: $google-blue;
+  }
 
   .icon-image {
     margin-left: -6px;
@@ -190,6 +203,10 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
     background-color: $google-focus-blue;
     border: 1px solid $google-focus-blue;
     color: $white;
+
+    .font-container {
+      background-color: $google-focus-blue;
+    }
   }
 }
 
@@ -198,6 +215,10 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
   border-color: $apple-black;
   background-color: $apple-black;
   font-size: 16px;
+
+  .font-container {
+    background-color: $apple-black;
+  }
 
   .icon-image {
     max-height: 1.8em;
@@ -209,6 +230,10 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
     background-color: $apple-focus-black;
     border: 1px solid $apple-focus-black;
     color: $white;
+
+    .font-container {
+      background-color: $apple-focus-black;
+    }
   }
 }
 
@@ -217,11 +242,19 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
   border-color: $microsoft-black;
   background-color: $microsoft-black;
 
+  .font-container {
+    background-color: $microsoft-black;
+  }
+
   &:hover,
   &:focus {
     background-color: $microsoft-focus-black;
     border: 1px solid $microsoft-focus-black;
     color: $white;
+
+    .font-container {
+      background-color: $microsoft-focus-black;
+    }
   }
 }
 

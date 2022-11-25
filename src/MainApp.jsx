@@ -22,7 +22,7 @@ const MainApp = () => (
   <AppProvider store={configureStore()}>
     <Switch>
       <Route exact path="/">
-        <Redirect to={updatePathWithQueryParams(REGISTER_PAGE)} />
+        <Redirect to={updatePathWithQueryParams(LOGIN_PAGE)} />
       </Route>
       <UnAuthOnlyRoute exact path={LOGIN_PAGE} render={() => <Logistration selectedPage={LOGIN_PAGE} />} />
       <UnAuthOnlyRoute exact path={REGISTER_PAGE} component={Logistration} />

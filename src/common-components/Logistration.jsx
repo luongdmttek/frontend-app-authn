@@ -73,7 +73,6 @@ const Logistration = (props) => {
             <>
               {!tpa && (
                 <Tabs defaultActiveKey={selectedPage} id="controlled-tab" onSelect={handleOnSelect}>
-                  <Tab title={intl.formatMessage(messages['logistration.register'])} eventKey={REGISTER_PAGE} />
                   <Tab title={intl.formatMessage(messages['logistration.sign.in'])} eventKey={LOGIN_PAGE} />
                 </Tabs>
               )}
@@ -83,9 +82,7 @@ const Logistration = (props) => {
           <Redirect to={updatePathWithQueryParams(key)} />
         )}
         <div id="main-content" className="main-content">
-          {selectedPage === LOGIN_PAGE
-            ? <LoginPage institutionLogin={institutionLogin} handleInstitutionLogin={handleInstitutionLogin} />
-            : <RegistrationPage institutionLogin={institutionLogin} handleInstitutionLogin={handleInstitutionLogin} />}
+          <LoginPage institutionLogin={institutionLogin} handleInstitutionLogin={handleInstitutionLogin} />
         </div>
       </div>
     </BaseComponent>
@@ -98,7 +95,7 @@ Logistration.propTypes = {
 };
 
 Logistration.defaultProps = {
-  selectedPage: REGISTER_PAGE,
+  selectedPage: LOGIN_PAGE,
 };
 
 export default injectIntl(Logistration);

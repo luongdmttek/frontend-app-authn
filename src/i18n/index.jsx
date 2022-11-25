@@ -15,6 +15,7 @@ import ptptMessages from './messages/pt_PT.json';
 import ruMessages from './messages/ru.json';
 import thMessages from './messages/th.json';
 import ukMessages from './messages/uk.json';
+import viMessages from './messages/vi.json';
 import zhcnMessages from './messages/zh_CN.json';
 
 const messages = {
@@ -35,6 +36,7 @@ const messages = {
   ru: ruMessages,
   th: thMessages,
   uk: ukMessages,
+  vi: viMessages,
   hi: hiMessages,
 };
 
