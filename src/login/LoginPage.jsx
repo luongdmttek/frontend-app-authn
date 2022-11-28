@@ -195,9 +195,14 @@ class LoginPage extends React.Component {
               />
             )}
             {isSocialAuthActive && (
-              <div className="row m-0">
-                <SocialAuthProviders socialAuthProviders={providers} />
-              </div>
+              <>
+                <div className="mt-4 mb-3 h4">
+                  {intl.formatMessage(messages['login.other.options.heading'])}
+                </div>
+                <div className="row m-0">
+                  <SocialAuthProviders socialAuthProviders={providers} />
+                </div> 
+              </>
             )}
           </>
         )}
