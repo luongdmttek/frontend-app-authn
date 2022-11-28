@@ -170,9 +170,12 @@ class LoginPage extends React.Component {
 
     return (
       <>
-        <div className="mt-4 mb-3 h4">
-          {intl.formatMessage(messages['login.other.options.heading'])}
-        </div>
+        {((!isEnterpriseLoginDisabled && isSocialAuthActive) || (isEnterpriseLoginDisabled && isInstitutionAuthActive))
+           && (
+             <div className="mt-4 mb-3 h4">
+               {intl.formatMessage(messages['login.other.options.heading'])}
+             </div>
+           )}
 
         {(!isEnterpriseLoginDisabled && isSocialAuthActive) && (
           <Hyperlink className="btn btn-link btn-sm text-body p-0 mb-4" destination={this.getEnterPriseLoginURL()}>
