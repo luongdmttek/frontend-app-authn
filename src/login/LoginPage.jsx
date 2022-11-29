@@ -195,7 +195,7 @@ class LoginPage extends React.Component {
               />
             )}
 
-            {isEnterpriseLoginDisabled && (
+            {(isEnterpriseLoginDisabled && isSocialAuthActive) && (
               <div className="mt-4 mb-3 h4">
                 {intl.formatMessage(messages['login.other.options.heading'])}
               </div>
