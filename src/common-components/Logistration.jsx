@@ -74,10 +74,9 @@ const Logistration = (props) => {
             <>
               {!tpa && (
                 <Tabs defaultActiveKey={selectedPage} id="controlled-tab" onSelect={handleOnSelect}>
-                  {
-                    enableRegister && <Tab title={intl.formatMessage(messages['logistration.register'])} eventKey={REGISTER_PAGE} />
-                  }
-                  <Tab title={intl.formatMessage(messages['logistration.sign.in'])} eventKey={LOGIN_PAGE} />
+                  <Tab title={intl.formatMessage(messages['logistration.sign.in'])} eventKey={LOGIN_PAGE} />                  
+                  { enableRegister && (
+                    <Tab title={intl.formatMessage(messages['logistration.register'])} eventKey={REGISTER_PAGE} />)}
                 </Tabs>
               )}
             </>
