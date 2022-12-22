@@ -38,6 +38,7 @@ function SocialAuthProviders(props) {
             <div className="font-container" aria-hidden="true">
               <FontAwesomeIcon
                 icon={SUPPORTED_ICON_CLASSES.includes(provider.iconClass) ? ['fab', provider.iconClass] : faSignInAlt}
+                size='xl'
               />
             </div>
           </>

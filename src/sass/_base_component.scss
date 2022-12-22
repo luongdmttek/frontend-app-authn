@@ -1,3 +1,5 @@
+$accent-a-light: #c9f2f5;
+$authn-bg-color: #0a3055;
 
 .layout {
   display: flex;
@@ -23,13 +25,13 @@
 }
 
 .logo-small {
-  width: 44.67px;
+  width: 150px;
   margin-top: 1.25rem;
   margin-left: 1.5rem;
 }
 
 .logo {
-  width: 71px;
+  width: 250px;
   margin-top: 2rem;
   margin-left: 1.5rem;
 }
@@ -128,20 +130,20 @@
 
 @include media-breakpoint-up('xl') {
  .extra-large-screen-top-stripe {
-   display: flex;
-   height: 0.5rem;
-   background-image: linear-gradient(
-     102.02deg,
-     $brand-700 10%,
-     $brand 10%,
-     $brand 45%,
-     $primary-700 45%,
-     $primary-700 55%,
-     $accent-a 55%,
-     $accent-a 75%,
-     $info-200 75%,
-  );
-   background-repeat: no-repeat;
+  //  display: flex;
+  //  height: 0.5rem;
+  //  background-image: linear-gradient(
+  //    102.02deg,
+  //    $brand-700 10%,
+  //    $brand 10%,
+  //    $brand 45%,
+  //    $primary-700 45%,
+  //    $primary-700 55%,
+  //    $accent-a 55%,
+  //    $accent-a 75%,
+  //    $info-200 75%,
+  // );
+  //  background-repeat: no-repeat;
  }
 }
 
@@ -153,7 +155,7 @@
 }
 
 .large-screen-svg-primary {
-  fill: $primary-400;
+  fill: $authn-bg-color;
 }
 
 .medium-screen-svg-light,
@@ -164,7 +166,7 @@
 }
 
 .medium-screen-svg-primary {
-  fill: $primary-400;
+  fill: $authn-bg-color;
 }
 
 [dir=rtl]{
@@ -179,20 +181,20 @@
 .small-yellow-line {
   width: 80px;
   height: 0;
-  border: 2px solid $accent-b;
+  border: 2px solid #F0CC00;
   transform: rotate(102.02deg);
 }
 
 .medium-yellow-line {
   width: 120px;
   height: 0;
-  border: 3px solid $accent-b;
+  border: 3px solid #F0CC00;
   transform: rotate(102.02deg);
 }
 
 .large-yellow-line {
   width: 240px;
   height: 0;
-  border: 3px solid $accent-b;
+  border: 3px solid #F0CC00;
   transform: rotate(102.02deg);
 }

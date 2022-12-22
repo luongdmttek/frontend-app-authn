@@ -25,6 +25,7 @@ const Logistration = (props) => {
   const tpa = getTpaHint();
   const [institutionLogin, setInstitutionLogin] = useState(false);
   const [key, setKey] = useState('');
+  const enableRegister = getConfig().ALLOW_PUBLIC_ACCOUNT_CREATION;
 
   useEffect(() => {
     const authService = getAuthService();
@@ -73,8 +74,9 @@ const Logistration = (props) => {
             <>
               {!tpa && (
                 <Tabs defaultActiveKey={selectedPage} id="controlled-tab" onSelect={handleOnSelect}>
-                  <Tab title={intl.formatMessage(messages['logistration.register'])} eventKey={REGISTER_PAGE} />
-                  <Tab title={intl.formatMessage(messages['logistration.sign.in'])} eventKey={LOGIN_PAGE} />
+                  <Tab title={intl.formatMessage(messages['logistration.sign.in'])} eventKey={LOGIN_PAGE} />                  
+                  { enableRegister && (
+                    <Tab title={intl.formatMessage(messages['logistration.register'])} eventKey={REGISTER_PAGE} />)}
                 </Tabs>
               )}
             </>
@@ -98,7 +100,7 @@ Logistration.propTypes = {
 };
 
 Logistration.defaultProps = {
-  selectedPage: REGISTER_PAGE,
+  selectedPage: LOGIN_PAGE,
 };
 
 export default injectIntl(Logistration);

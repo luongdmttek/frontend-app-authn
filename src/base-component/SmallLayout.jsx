@@ -8,8 +8,7 @@ import classNames from 'classnames';
 import messages from './messages';
 
 const SmallLayout = ({ intl }) => (
-  <span className="bg-primary-400 w-100">
-    <div className="col-md-12 small-screen-top-stripe" />
+  <span className="bg-primary-500 w-100">
     <div>
       <Hyperlink destination={getConfig().MARKETING_SITE_BASE_URL}>
         <Image className="logo-small" alt={getConfig().SITE_NAME} src={getConfig().LOGO_WHITE_URL} />
@@ -22,7 +21,7 @@ const SmallLayout = ({ intl }) => (
             { 'ml-4.5': getConfig().SITE_NAME !== 'edX' },
           )}
         >
-          <span className="mr-1">{intl.formatMessage(messages['start.learning'])}</span>
+          <span className="mr-2">{intl.formatMessage(messages['start.learning'])}</span>
           <span className="text-accent-a d-inline-block">
             {intl.formatMessage(messages['with.site.name'], { siteName: getConfig().SITE_NAME })}
           </span>
